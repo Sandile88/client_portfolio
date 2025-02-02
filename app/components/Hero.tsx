@@ -51,16 +51,16 @@ const Hero = () => {
           </div>
 
           <div className="relative hidden lg:block">
-            {/* <div className="absolute inset-0 flex items-center justify-center">
+            <div className="absolute inset-0 flex items-center justify-center">
               <div className="h-[450px] w-[450px] rounded-full bg-yellow-500/10" />
-            </div> */}
+            </div>
             <div className="relative flex h-full items-center justify-center">
               <div className="h-[400px] w-[400px] rounded-full  border-8 border-yellow-500 shadow-lg overflow-hidden">
               <Image
                 src="/img.jpeg"
                 alt="Professional headshot"
-                width={400}
-                height={400}
+                width={775}
+                height={1170}
                 className="object-cover"
                 priority
                 />
