@@ -55,18 +55,21 @@ const Hero = () => {
               <div className="h-[450px] w-[450px] rounded-full bg-yellow-500/10" />
             </div>
             <div className="relative flex h-full items-center justify-center">
-              <div className="h-[400px] w-[400px] rounded-full  border-8 border-yellow-500 shadow-lg overflow-hidden">
-              <Image
-                src="/img.jpeg"
-                alt="Professional headshot"
-                width={775}
-                height={1170}
-                className="object-cover"
-                priority
-                />
-              </div>
+            <div className="relative h-[400px] w-[400px]">
+                <div className="absolute inset-0 rounded-full border-8 border-yellow-500 shadow-lg" />
+                <div className="h-full w-full rounded-full overflow-hidden">
+                    <Image
+                    src="/img.jpeg"
+                    alt="Professional headshot"
+                    width={400}
+                    height={400}
+                    className="h-full w-full object-cover"
+                    priority
+                    />
+                </div>
+                </div>
             </div>
-          </div>
+            </div>
         </div>
       </div>
     </div>
