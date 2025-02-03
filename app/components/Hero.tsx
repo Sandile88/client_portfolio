@@ -13,28 +13,28 @@ const Hero = () => {
           <div className="flex flex-col justify-center space-y-8">
             <div className="space-y-4">
               <h2 className="text-lg font-semibold text-yellow-500">Chartered Accountant</h2>
-              <h1 className="text-4xl font-bold tracking-tight text-black sm:text-5xl">
+              <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
                 Ayanda Bhebhe
               </h1>
-              <p className="text-xl text-black">
+              <p className="text-xl text-gray-900">
                 An accomplished, dynamic and well-seasoned Accountant and Auditor with over 9 years of experience
               </p>
             </div>
 
             <div className="space-y-4">
-              <div className="flex items-center space-x-3 text-black">
+              <div className="flex items-center space-x-3 text-gray-900">
                 <MapPin className="h-5 w-5 text-yellow-500" />
                 <span>Winchester Hills – Gauteng, South Africa</span>
               </div>
-              <div className="flex items-center space-x-3 text-black">
+              <div className="flex items-center space-x-3 text-gray-900">
                 <Phone className="h-5 w-5 text-yellow-500" />
                 <span>+27 76 272 0013</span>
               </div>
-              <div className="flex items-center space-x-3 text-black">
+              <div className="flex items-center space-x-3 text-gray-900">
                 <Mail className="h-5 w-5 text-yellow-500" />
                 <span>ayandasizalobuhle@gmail.com</span>
               </div>
-              <div className="flex items-center space-x-3 text-black">
+              <div className="flex items-center space-x-3 text-gray-900">
                 <Linkedin className="h-5 w-5 text-yellow-500" />
                 <a href="https://za.linkedin.com/in/ayanda-bhebhe-400b0032" className="hover:text-yellow-500 transition-colors">
                   LinkedIn Profile
