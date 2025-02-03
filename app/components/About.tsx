@@ -24,7 +24,7 @@ const About = () => {
               <div className="flex flex-col items-center text-center justify-center mt-6">
                 <h2 className="font-medium title-font text-gray-900 text-lg">Professional Profile</h2>
                 <div className="w-12 h-1 bg-yellow-500 rounded mt-2 mb-4"></div>
-                <p className="text-base text-gray-600">
+                <p className="text-base text-gray-600 text-justify">
                   Accomplished accountant with expertise in IFRS, IFRS for SMEs, and ISA standards. CaseWare specialist
                   with proven implementation success.
                 </p>
@@ -32,7 +32,7 @@ const About = () => {
             </div>
 
             <div className="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left flex flex-col justify-center">
-              <p className="leading-relaxed text-lg mb-4 text-gray-600">
+              <p className="leading-relaxed text-lg mb-4 text-gray-600 text-justify">
                 With over 9 years of experience in both private and public sectors, I specialize in financial
                 accounting, statutory reporting, and system implementation. My expertise extends to managing complex
                 audits, preparing consolidated financial statements, and ensuring compliance with international

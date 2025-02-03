@@ -16,7 +16,7 @@ const Hero = () => {
               <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
                 Ayanda Bhebhe
               </h1>
-              <p className="text-xl text-gray-900">
+              <p className="text-xl text-gray-900 text-justify">
                 An accomplished, dynamic and well-seasoned Accountant and Auditor with over 9 years of experience
               </p>
             </div>
