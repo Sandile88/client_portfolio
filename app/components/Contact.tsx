@@ -1,11 +1,11 @@
 "use client"
 
 import type React from "react"
-import { Phone, Mail, MapPin } from "lucide-react";
-import { Button } from "./ui/button";
-import { Input } from "./ui/input";
-import { Textarea } from "./ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select"; //yet to add a select component
+import { Phone, Mail, MapPin } from "lucide-react"
+import { Button } from "./ui/button"
+import { Input } from "./ui/input"
+import { Textarea } from "./ui/textarea"
+import { Select } from "./ui/select"
 
 const Contact = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -13,11 +13,20 @@ const Contact = () => {
     // submission logic to be put here
   }
 
+  const serviceOptions = [
+    { value: "", label: "Select a service" },
+    { value: "financial-management", label: "Financial Management" },
+    { value: "statutory-reporting", label: "Statutory Reporting" },
+    { value: "audit", label: "Audit Services" },
+    { value: "caseware", label: "CaseWare Implementation" },
+    { value: "consulting", label: "Financial Consulting" },
+  ]
+
   return (
     <section className="bg-white py-24" id="contact">
       <div className="container px-5 mx-auto max-w-7xl">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold tracking-tight">
+          <h2 className="text-4xl font-bold tracking-tight text-gray-900">
             Get in <span className="text-yellow-500">Touch</span>
           </h2>
           <div className="w-24 h-1 bg-yellow-500 mx-auto rounded mt-4"></div>
@@ -53,18 +62,7 @@ const Contact = () => {
                   <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-1">
                     Service Required
                   </label>
-                  <Select>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Select a service" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="financial-management">Financial Management</SelectItem>
-                      <SelectItem value="statutory-reporting">Statutory Reporting</SelectItem>
-                      <SelectItem value="audit">Audit Services</SelectItem>
-                      <SelectItem value="caseware">CaseWare Implementation</SelectItem>
-                      <SelectItem value="consulting">Financial Consulting</SelectItem>
-                    </SelectContent>
-                  </Select>
+                  <Select id="service" name="service" options={serviceOptions} className="text-gray-900" required />
                 </div>
 
                 <div>
@@ -89,7 +87,7 @@ const Contact = () => {
 
           <div className="flex flex-col justify-center space-y-8">
             <div>
-              <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
+              <h3 className="text-2xl font-semibold mb-6 text-gray-900">Contact Information</h3>
               <div className="space-y-4">
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 rounded-full bg-yellow-500/10 flex items-center justify-center">
@@ -122,12 +120,6 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-
-            <div className="bg-yellow-500/10 p-6 rounded-lg">
-              <h4 className="font-semibold text-gray-900 mb-2">Office Hours</h4>
-              <p className="text-gray-600">Monday - Friday: 8:00 AM - 5:00 PM</p>
-              <p className="text-gray-600">Saturday - Sunday: Closed</p>
-            </div>
           </div>
         </div>
       </div>
@@ -135,5 +127,5 @@ const Contact = () => {
   )
 }
 
-export default Contact;
+export default Contact
 
