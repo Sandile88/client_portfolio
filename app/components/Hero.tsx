@@ -36,7 +36,7 @@ const Hero = () => {
               </div>
               <div className="flex items-center space-x-3 text-gray-900">
                 <Linkedin className="h-5 w-5 text-yellow-500" />
-                <a href="https://za.linkedin.com/in/ayanda-bhebhe-400b0032" className="hover:text-yellow-500 transition-colors">
+                <a href="https://www.linkedin.com/in/ayanda-bhebhe-400b0032/" className="hover:text-yellow-500 transition-colors">
                   LinkedIn Profile
                 </a>
               </div>

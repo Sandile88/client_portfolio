@@ -24,7 +24,7 @@ const Footer = () => {
               <Phone className="h-5 w-5 text-yellow-500" />
             </a>
             <a
-              href="https://za.linkedin.com/in/ayanda-bhebhe-400b0032"
+              href="https://www.linkedin.com/in/ayanda-bhebhe-400b0032/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 hover:text-yellow-500 transition-colors"
