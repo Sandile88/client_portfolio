@@ -1,3 +1,5 @@
+"use client"
+
 import type React from "react";
 import { Briefcase, BarChart, FileText, Database, Users, Cog, type LucideIcon } from "lucide-react";
 

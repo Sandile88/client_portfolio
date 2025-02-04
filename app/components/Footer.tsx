@@ -1,4 +1,6 @@
-import { Linkedin, Mail, Phone } from "lucide-react"
+"use client"
+
+import { Linkedin, Mail, Phone } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -6,7 +8,7 @@ const Footer = () => {
       <div className="container mx-auto px-5 py-8">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
-            <p className="text-gray-600 text-sm">© {new Date().getFullYear()} Ayanda Bhebhe. All rights reserved.</p>
+            <p className="text-gray-600 text-sm">{`©`} {new Date().getFullYear()} {`Ayanda Bhebhe. All rights reserved.`}</p>
           </div>
           <div className="flex space-x-6">
             <a

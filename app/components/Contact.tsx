@@ -1,11 +1,11 @@
 "use client"
 
-import type React from "react"
-import { Phone, Mail, MapPin } from "lucide-react"
-import { Button } from "./ui/button"
-import { Input } from "./ui/input"
-import { Textarea } from "./ui/textarea"
-import { Select } from "./ui/select"
+import type React from "react";
+import { Phone, Mail, MapPin } from "lucide-react";
+import { Button } from "./ui/button";
+import { Input } from "./ui/input";
+import { Textarea } from "./ui/textarea";
+import { Select } from "./ui/select";
 
 const Contact = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -27,10 +27,10 @@ const Contact = () => {
       <div className="container px-5 mx-auto max-w-7xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold tracking-tight text-gray-900">
-            Get in <span className="text-yellow-500">Touch</span>
+            {`Get in`} <span className="text-yellow-500">{`Touch`}</span>
           </h2>
           <div className="w-24 h-1 bg-yellow-500 mx-auto rounded mt-4"></div>
-          <p className="mt-4 text-gray-600">Feel free to reach out for any inquiries or collaboration opportunities.</p>
+          <p className="mt-4 text-gray-600">{`Feel free to reach out for any inquiries or collaboration opportunities.`}</p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
@@ -39,14 +39,14 @@ const Contact = () => {
               <div className="space-y-4">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                    Your Name
+                    {`Your Name`}
                   </label>
                   <Input id="name" name="name" placeholder="Enter your full name" required className="w-full" />
                 </div>
 
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                    Your Email
+                    {`Your Email`}
                   </label>
                   <Input
                     id="email"
@@ -60,14 +60,14 @@ const Contact = () => {
 
                 <div>
                   <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-1">
-                    Service Required
+                    {`Service Required`}
                   </label>
                   <Select id="service" name="service" options={serviceOptions} className="text-gray-900" required />
                 </div>
 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                    Message
+                    {`Message`}
                   </label>
                   <Textarea
                     id="message"
@@ -80,22 +80,22 @@ const Contact = () => {
               </div>
 
               <Button type="submit" className="w-full bg-yellow-500 hover:bg-yellow-600 text-white">
-                Send Message
+                {`Send Message`}
               </Button>
             </form>
           </div>
 
           <div className="flex flex-col justify-center space-y-8">
             <div>
-              <h3 className="text-2xl font-semibold mb-6 text-gray-900">Contact Information</h3>
+              <h3 className="text-2xl font-semibold mb-6 text-gray-900">{`Contact Information`}</h3>
               <div className="space-y-4">
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 rounded-full bg-yellow-500/10 flex items-center justify-center">
                     <MapPin className="h-6 w-6 text-yellow-500" />
                   </div>
                   <div>
-                    <p className="font-medium text-gray-900">Location</p>
-                    <p className="text-gray-600">Winchester Hills – Gauteng, South Africa</p>
+                    <p className="font-medium text-gray-900">{`Location`}</p>
+                    <p className="text-gray-600">{`Winchester Hills – Gauteng, South Africa`}</p>
                   </div>
                 </div>
 
@@ -104,8 +104,8 @@ const Contact = () => {
                     <Phone className="h-6 w-6 text-yellow-500" />
                   </div>
                   <div>
-                    <p className="font-medium text-gray-900">Phone</p>
-                    <p className="text-gray-600">+27 76 272 0013</p>
+                    <p className="font-medium text-gray-900">{`Phone`}</p>
+                    <p className="text-gray-600">{`+27 76 272 0013`}</p>
                   </div>
                 </div>
 
@@ -114,8 +114,8 @@ const Contact = () => {
                     <Mail className="h-6 w-6 text-yellow-500" />
                   </div>
                   <div>
-                    <p className="font-medium text-gray-900">Email</p>
-                    <p className="text-gray-600">ayandasizalobuhle@gmail.com</p>
+                    <p className="font-medium text-gray-900">{`Email`}</p>
+                    <p className="text-gray-600">{`ayandasizalobuhle@gmail.com`}</p>
                   </div>
                 </div>
               </div>
@@ -127,5 +127,5 @@ const Contact = () => {
   )
 }
 
-export default Contact
+export default Contact;
 

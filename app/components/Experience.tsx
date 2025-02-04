@@ -1,5 +1,7 @@
-import type React from "react"
-import { Building2, Calendar, CheckCircle2 } from "lucide-react"
+"use client"
+
+import type React from "react";
+import { Building2, Calendar, CheckCircle2 } from "lucide-react";
 
 interface ExperienceItemProps {
   title: string
@@ -23,7 +25,7 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({ title, company, period,
         </div>
       </div>
       <div className="md:w-2/3">
-        <h4 className="text-lg font-semibold mb-2 text-gray-800">Key Responsibilities:</h4>
+        <h4 className="text-lg font-semibold mb-2 text-gray-800">{`Key Responsibilities:`}</h4>
         <ul className="space-y-2">
           {responsibilities.map((resp, index) => (
             <li key={index} className="flex items-start">
@@ -97,7 +99,7 @@ const Experience: React.FC = () => {
       <div className="container px-5 mx-auto max-w-7xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold tracking-tight text-gray-900">
-            My <span className="text-yellow-500">Experience</span>
+            {`My`} <span className="text-yellow-500">{`Experience`}</span>
           </h2>
           <div className="w-24 h-1 bg-yellow-500 mx-auto rounded mt-4"></div>
         </div>
@@ -112,5 +114,5 @@ const Experience: React.FC = () => {
   )
 }
 
-export default Experience
+export default Experience;
 

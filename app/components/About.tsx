@@ -1,5 +1,7 @@
-import Image from "next/image"
-import Link from "next/link"
+"use client"
+
+import Image from "next/image";
+import Link from "next/link";
 
 const About = () => {
   return (
@@ -7,7 +9,7 @@ const About = () => {
       <div className="container px-5 mx-auto max-w-7xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold tracking-tight text-gray-900">
-            About <span className="text-yellow-500">Me</span>
+            {`About`} <span className="text-yellow-500">{`Me`}</span>
           </h2>
           <div className="w-24 h-1 bg-yellow-500 mx-auto rounded mt-4"></div>
         </div>
@@ -24,24 +26,24 @@ const About = () => {
             </div>
 
             <div className="lg:w-2/3 flex flex-col justify-center">
-              <h2 className="font-medium text-gray-900 text-2xl mb-4">Professional Profile</h2>
+              <h2 className="font-medium text-gray-900 text-2xl mb-4">{`Professional Profile`}</h2>
               <div className="w-12 h-1 bg-yellow-500 rounded mb-6"></div>
               <p className="text-base text-gray-600 mb-6">
-                Accomplished accountant with expertise in IFRS, IFRS for SMEs, and ISA standards. CaseWare specialist
-                with proven implementation success.
+               {` Accomplished accountant with expertise in IFRS, IFRS for SMEs, and ISA standards. CaseWare specialist
+                with proven implementation success.`}
               </p>
               <p className="leading-relaxed text-lg mb-6 text-gray-600">
-                With over 9 years of experience in both private and public sectors, I specialize in financial
+               {` With over 9 years of experience in both private and public sectors, I specialize in financial
                 accounting, statutory reporting, and system implementation. My expertise extends to managing complex
                 audits, preparing consolidated financial statements, and ensuring compliance with international
                 standards. As a CaseWare specialist, I've successfully implemented solutions across various industries
-                while exceeding client expectations.
+                while exceeding client expectations.`}
               </p>
               <Link
                 href="#experience"
                 className="text-yellow-500 inline-flex items-center hover:text-yellow-600 transition-colors cursor-pointer"
               >
-                View Experience
+                {`View Experience`}
                 <svg
                   fill="none"
                   stroke="currentColor"
@@ -62,5 +64,5 @@ const About = () => {
   )
 }
 
-export default About
+export default About;
 

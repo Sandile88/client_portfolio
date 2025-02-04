@@ -1,5 +1,5 @@
-import React, { useState } from "react"
-import { ChevronDown } from "lucide-react"
+import React, { useState } from "react";
+import { ChevronDown } from "lucide-react";
 
 interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
   options: { value: string; label: string }[]
