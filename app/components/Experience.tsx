@@ -9,29 +9,32 @@ interface ExperienceItemProps {
 }
 
 const ExperienceItem: React.FC<ExperienceItemProps> = ({ title, company, period, responsibilities }) => (
-  <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105">
-    <div className="bg-gradient-to-r from-yellow-500 to-yellow-600 p-4 text-white">
-      <h3 className="text-xl font-bold">{title}</h3>
-      <div className="flex items-center mt-2">
-        <Building2 className="h-4 w-4 mr-2" />
-        <span className="font-medium">{company}</span>
+  <div className="mb-12 last:mb-0">
+    <div className="flex flex-col md:flex-row md:items-center mb-4">
+      <div className="bg-gradient-to-r from-yellow-500 to-yellow-600 text-white p-4 rounded-lg md:w-1/3 mb-4 md:mb-0 md:mr-6">
+        <h3 className="text-xl font-bold">{title}</h3>
+        <div className="flex items-center mt-2">
+          <Building2 className="h-4 w-4 mr-2" />
+          <span className="font-medium">{company}</span>
+        </div>
+        <div className="flex items-center mt-1">
+          <Calendar className="h-4 w-4 mr-2" />
+          <span>{period}</span>
+        </div>
       </div>
-      <div className="flex items-center mt-1">
-        <Calendar className="h-4 w-4 mr-2" />
-        <span>{period}</span>
+      <div className="md:w-2/3">
+        <h4 className="text-lg font-semibold mb-2 text-gray-800">Key Responsibilities:</h4>
+        <ul className="space-y-2">
+          {responsibilities.map((resp, index) => (
+            <li key={index} className="flex items-start">
+              <CheckCircle2 className="h-5 w-5 mr-2 text-yellow-500 flex-shrink-0 mt-0.5" />
+              <span className="text-gray-600">{resp}</span>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
-    <div className="p-4">
-      <h4 className="text-lg font-semibold mb-2 text-gray-800">Key Responsibilities:</h4>
-      <ul className="space-y-2">
-        {responsibilities.map((resp, index) => (
-          <li key={index} className="flex items-start">
-            <CheckCircle2 className="h-5 w-5 mr-2 text-yellow-500 flex-shrink-0 mt-0.5" />
-            <span className="text-gray-600">{resp}</span>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <div className="w-full h-px bg-gradient-to-r from-yellow-500/0 via-yellow-500 to-yellow-500/0"></div>
   </div>
 )
 
@@ -90,7 +93,7 @@ const Experience: React.FC = () => {
   ]
 
   return (
-    <section className="bg-gray-50 py-24" id="experience">
+    <section className="bg-white py-24" id="experience">
       <div className="container px-5 mx-auto max-w-7xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold tracking-tight text-gray-900">
@@ -99,7 +102,7 @@ const Experience: React.FC = () => {
           <div className="w-24 h-1 bg-yellow-500 mx-auto rounded mt-4"></div>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2">
+        <div className="space-y-8">
           {experiences.map((exp, index) => (
             <ExperienceItem key={index} {...exp} />
           ))}
