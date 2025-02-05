@@ -132,9 +132,9 @@ const Contact = () => {
                 </div>
               )}
 
-              <Button type="submit" className="w-full bg-yellow-500 hover:bg-yellow-600 text-white">
+              <button type="submit" className="rounded-full bg-yellow-500 px-8 py-3 hover:bg-yellow-400 text-gray-900 transition-colors">
                 <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
-              </Button>
+              </button>
             </form>
           </div>
 

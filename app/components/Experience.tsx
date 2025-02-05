@@ -11,7 +11,7 @@ interface ExperienceItemProps {
 }
 
 const ExperienceItem: React.FC<ExperienceItemProps> = ({ title, company, period, responsibilities }) => (
-  <div className="mb-12 last:mb-0">
+  <div  className="mb-12 last:mb-0">
     <div className="flex flex-col md:flex-row md:items-center mb-4">
       <div className="bg-gradient-to-r from-yellow-500 to-yellow-600 text-white p-4 rounded-lg md:w-1/3 mb-4 md:mb-0 md:mr-6">
         <h3 className="text-xl font-bold">{title}</h3>
