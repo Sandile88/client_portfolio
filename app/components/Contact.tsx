@@ -15,6 +15,7 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    console.log('hhhh');
     
 
     if(!formRef.current) {
@@ -28,10 +29,13 @@ const Contact = () => {
 
     const serviceId = process.env.NEXT_PUBLIC_SERVICE_ID as string;
     const templateId = process.env.NEXT_PUBLIC_TEMPLATE_ID as string;
-    const publicKey = process.env.NEXT_PUBLIC_KEY as string;
+    const publicKey = process.env.NEXT_PUBLIC_PUBLIC_KEY as string;
+    console.log("serviceid", serviceId);
+    console.log("template", templateId);
+    console.log("public", publicKey);
 
     if (!serviceId || !templateId || !publicKey) {
-      console.error('EmailJS environment varaibles are not properly configured');
+      console.error('EmailJS environment variables are not properly configured');
       setSubmitStatus('COnfiguration error. Please contact support');
       setIsSubmitting(false);
       return;
@@ -78,7 +82,7 @@ const Contact = () => {
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
                     {`Your Name`}
                   </label>
-                  <Input id="name" name="name" placeholder="Enter your full name" required className="w-full text-gray-900" />
+                  <Input id="name" name="user_name" placeholder="Full Name" required className="w-full text-gray-900" />
                 </div>
 
                 <div>
@@ -87,12 +91,18 @@ const Contact = () => {
                   </label>
                   <Input
                     id="email"
-                    name="email"
+                    name="user_email"
                     type="email"
-                    placeholder="Enter your email address"
+                    placeholder="Email Address"
                     required
                     className="w-full text-gray-900"
                   />
+                </div>
+                <div>
+                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
+                    {`Subject`}
+                  </label>
+                  <Input id="subject" name="subject" placeholder="Subject" required className="w-full text-gray-900" />
                 </div>
 
                 <div>
@@ -102,7 +112,7 @@ const Contact = () => {
                   <Textarea
                     id="message"
                     name="message"
-                    placeholder="Write your message here"
+                    placeholder="Your Message"
                     required
                     className="min-h-[150px] w-full text-gray-900"
                   />
