@@ -6,11 +6,57 @@ import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { Select } from "./ui/select";
+import emailjs from "@emailjs/browser"
+import { useRef, useState } from "react";
 
 const Contact = () => {
+  const formRef = useRef<HTMLFormElement>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState('');
+
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    // submission logic to be put here
+    
+
+    if(!formRef.current) {
+      console.error('Form reference is not available');
+      setSubmitStatus('An error occured. Please try again');
+      return;
+    }
+
+    setIsSubmitting(true);
+    setSubmitStatus('');
+
+    const serviceId = process.env.NEXT_PUBLIC_SERVICE_ID as string;
+    const templateId = process.env.NEXT_PUBLIC_TEMPLATE_ID as string;
+    const publicKey = process.env.NEXT_PUBLIC_KEY as string;
+
+    if (!serviceId || !templateId || !publicKey) {
+      console.error('EmailJS environment varaibles are not properly configured');
+      setSubmitStatus('COnfiguration error. Please contact support');
+      setIsSubmitting(false);
+      return;
+    }
+
+    try {
+      const res = await emailjs.sendForm(
+        serviceId,
+        templateId,
+        formRef.current,
+        publicKey
+      );
+
+      if (res.text === 'OK') {
+        setSubmitStatus('Message sent successfully');
+        formRef.current.reset();
+      } else {
+        setSubmitStatus('Failed to send message. Please try again');
+      } 
+    } catch (error) {
+      setSubmitStatus('An error occured. Please try again later.');
+    }
+
   }
 
   const serviceOptions = [
@@ -35,7 +81,7 @@ const Contact = () => {
 
         <div className="grid lg:grid-cols-2 gap-12">
           <div className="bg-gray-50 p-8 rounded-lg shadow-lg">
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
               <div className="space-y-4">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
@@ -78,9 +124,16 @@ const Contact = () => {
                   />
                 </div>
               </div>
+              {submitStatus && (
+                <div>
+                  <p className={`text-sm ${submitStatus.includes('success') ? 'text-green-500' : 'text-red-500'}`}>
+                  {submitStatus}
+                  </p>
+                </div>
+              )}
 
               <Button type="submit" className="w-full bg-yellow-500 hover:bg-yellow-600 text-white">
-                {`Send Message`}
+                <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
               </Button>
             </form>
           </div>
@@ -122,6 +175,8 @@ const Contact = () => {
             </div>
           </div>
         </div>
+
+
       </div>
     </section>
   )
