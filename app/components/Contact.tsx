@@ -4,7 +4,6 @@ import type React from "react";
 import { Phone, Mail, MapPin, Send } from "lucide-react";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
-import { Select } from "./ui/select";
 import emailjs from "@emailjs/browser"
 import { useRef, useState } from "react";
 
@@ -59,14 +58,6 @@ const Contact = () => {
 
   }
 
-  const serviceOptions = [
-    { value: "", label: "Select a service" },
-    { value: "financial-management", label: "Financial Management" },
-    { value: "statutory-reporting", label: "Statutory Reporting" },
-    { value: "audit", label: "Audit Services" },
-    { value: "caseware", label: "CaseWare Implementation" },
-    { value: "consulting", label: "Financial Consulting" },
-  ]
 
   return (
     <section className="bg-white py-24" id="contact">
