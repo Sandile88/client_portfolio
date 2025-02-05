@@ -14,7 +14,7 @@ const Hero = () => {
           
           <div className="flex flex-col justify-center space-y-8">
             <div className="space-y-4">
-              <h2 className="text-lg font-semibold text-yellow-500">{`Chartered Accountant`}</h2>
+              <h2 className="text-xl font-semibold text-yellow-500">{`Chartered Accountant`}</h2>
               <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
                 {`Ayanda Bhebhe`}
               </h1>

@@ -5,13 +5,15 @@ interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
   options: { value: string; label: string }[]
 }
 
-const Select = React.forwardRef<HTMLSelectElement, SelectProps>(({ className, options, ...props }, ref) => {
+const Select = React.forwardRef<HTMLSelectElement, SelectProps>(({ className = "", options, ...props }, ref) => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
     <div className="relative">
       <select
-        className="appearance-none w-full rounded-md border border-gray-200 bg-white px-3 py-2 pr-8 text-sm ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-500 focus-visible:ring-offset-2"
+        className={`appearance-none w-full rounded-md border border-gray-200 bg-white px-3 py-2 pr-8 
+        text-sm ring-offset-white focus-visible:outline-none focus-visible:ring-2 
+        focus-visible:ring-yellow-500 focus-visible:ring-offset-2 ${className}`}
         ref={ref}
         {...props}
         onFocus={() => setIsOpen(true)}

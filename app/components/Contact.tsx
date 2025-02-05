@@ -2,7 +2,6 @@
 
 import type React from "react";
 import { Phone, Mail, MapPin } from "lucide-react";
-import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { Select } from "./ui/select";
@@ -55,6 +54,7 @@ const Contact = () => {
       } 
     } catch (error) {
       setSubmitStatus('An error occured. Please try again later.');
+      console.error('EmailJS Error:', error);
     }
 
   }
