@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image";
-import Link from "next/link";
+import { Link as ScrollLink } from "react-scroll";
 
 const About = () => {
   return (
@@ -39,8 +39,12 @@ const About = () => {
                 standards. As a CaseWare specialist, I've successfully implemented solutions across various industries
                 while exceeding client expectations.`}
               </p>
-              <Link
-                href="#experience"
+              <ScrollLink
+                to={"experience"}
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
                 className="text-yellow-500 inline-flex items-center hover:text-yellow-600 transition-colors cursor-pointer"
               >
                 {`View Experience`}
@@ -55,7 +59,7 @@ const About = () => {
                 >
                   <path d="M5 12h14M12 5l7 7-7 7"></path>
                 </svg>
-              </Link>
+              </ScrollLink>
             </div>
           </div>
         </div>
