@@ -1,7 +1,7 @@
 "use client"
 
-import type React from "react";
-import { Briefcase, BarChart, FileText, Database, Users, Cog, type LucideIcon } from "lucide-react";
+import type React from "react"
+import { Briefcase, BarChart, FileText, Database, Users, Cog, type LucideIcon } from "lucide-react"
 
 interface ServiceCardProps {
   icon: LucideIcon
@@ -10,15 +10,14 @@ interface ServiceCardProps {
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({ icon: Icon, title, description }) => (
-  <div className="bg-white p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:scale-105">
-    <div className="w-16 h-16 rounded-full bg-yellow-500/10 flex items-center justify-center mb-4 mx-auto">
-      <Icon className="h-8 w-8 text-yellow-500" />
+  <div className="bg-white p-5 lg:p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:scale-105">
+    <div className="w-14 h-14 lg:w-16 lg:h-16 rounded-full bg-yellow-500/10 flex items-center justify-center mb-4 mx-auto">
+      <Icon className="h-7 w-7 lg:h-8 lg:w-8 text-yellow-500" />
     </div>
-    <h3 className="text-xl font-semibold text-gray-900 mb-2 text-center">{title}</h3>
-    <p className="text-gray-600 text-center">{description}</p>
+    <h3 className="text-lg lg:text-xl font-semibold text-gray-900 mb-2 text-center">{title}</h3>
+    <p className="text-sm lg:text-base text-gray-600 text-center">{description}</p>
   </div>
 )
-
 
 interface Service {
   icon: LucideIcon
@@ -64,16 +63,16 @@ const Services: React.FC = () => {
   ]
 
   return (
-    <section className="bg-gray-50 py-24" id="services">
-      <div className="container px-5 mx-auto max-w-7xl">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold tracking-tight text-gray-900">
+    <section className="bg-gray-50 py-16 lg:py-24" id="services">
+      <div className="container px-4 lg:px-5 mx-auto max-w-7xl">
+        <div className="text-center mb-12 lg:mb-16">
+          <h2 className="text-3xl lg:text-4xl font-bold tracking-tight text-gray-900">
             My <span className="text-yellow-500">Services</span>
           </h2>
           <div className="w-24 h-1 bg-yellow-500 mx-auto rounded mt-4"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {services.map((service, index) => (
             <ServiceCard key={index} {...service} />
           ))}
@@ -83,5 +82,5 @@ const Services: React.FC = () => {
   )
 }
 
-export default Services;
+export default Services
 

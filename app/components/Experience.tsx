@@ -1,7 +1,7 @@
 "use client"
 
-import type React from "react";
-import { Building2, Calendar, CheckCircle2 } from "lucide-react";
+import type React from "react"
+import { Building2, Calendar, CheckCircle2 } from "lucide-react"
 
 interface ExperienceItemProps {
   title: string
@@ -11,26 +11,26 @@ interface ExperienceItemProps {
 }
 
 const ExperienceItem: React.FC<ExperienceItemProps> = ({ title, company, period, responsibilities }) => (
-  <div  className="mb-12 last:mb-0">
-    <div className="flex flex-col md:flex-row md:items-center mb-4">
-      <div className="bg-gradient-to-r from-yellow-500 to-yellow-600 text-white p-4 rounded-lg md:w-1/3 mb-4 md:mb-0 md:mr-6">
-        <h3 className="text-xl font-bold">{title}</h3>
+  <div className="mb-8 lg:mb-12 last:mb-0">
+    <div className="flex flex-col lg:flex-row lg:items-center mb-4">
+      <div className="bg-gradient-to-r from-yellow-500 to-yellow-600 text-white p-4 rounded-lg lg:w-1/3 mb-4 lg:mb-0 lg:mr-6">
+        <h3 className="text-lg lg:text-xl font-bold">{title}</h3>
         <div className="flex items-center mt-2">
           <Building2 className="h-4 w-4 mr-2" />
-          <span className="font-medium">{company}</span>
+          <span className="font-medium text-sm lg:text-base">{company}</span>
         </div>
         <div className="flex items-center mt-1">
           <Calendar className="h-4 w-4 mr-2" />
-          <span>{period}</span>
+          <span className="text-sm lg:text-base">{period}</span>
         </div>
       </div>
-      <div className="md:w-2/3">
-        <h4 className="text-lg font-semibold mb-2 text-gray-800">{`Key Responsibilities:`}</h4>
+      <div className="lg:w-2/3">
+        <h4 className="text-base lg:text-lg font-semibold mb-2 text-gray-800">{`Key Responsibilities:`}</h4>
         <ul className="space-y-2">
           {responsibilities.map((resp, index) => (
             <li key={index} className="flex items-start">
               <CheckCircle2 className="h-5 w-5 mr-2 text-yellow-500 flex-shrink-0 mt-0.5" />
-              <span className="text-gray-600">{resp}</span>
+              <span className="text-sm lg:text-base text-gray-600">{resp}</span>
             </li>
           ))}
         </ul>
@@ -95,10 +95,10 @@ const Experience: React.FC = () => {
   ]
 
   return (
-    <section className="bg-white py-24" id="experience">
-      <div className="container px-5 mx-auto max-w-7xl">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold tracking-tight text-gray-900">
+    <section className="bg-white py-16 lg:py-24" id="experience">
+      <div className="container px-4 lg:px-5 mx-auto max-w-7xl">
+        <div className="text-center mb-12 lg:mb-16">
+          <h2 className="text-3xl lg:text-4xl font-bold tracking-tight text-gray-900">
             {`My`} <span className="text-yellow-500">{`Experience`}</span>
           </h2>
           <div className="w-24 h-1 bg-yellow-500 mx-auto rounded mt-4"></div>
@@ -114,5 +114,5 @@ const Experience: React.FC = () => {
   )
 }
 
-export default Experience;
+export default Experience
 
