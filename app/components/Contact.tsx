@@ -58,8 +58,9 @@ const Contact = () => {
     } catch (error) {
       setSubmitStatus('An error occured. Please try again later.');
       console.error('EmailJS Error:', error);
-    }
-
+    }  finally {
+      setIsSubmitting(false);
+  }
   }
 
 
