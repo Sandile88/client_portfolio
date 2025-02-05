@@ -45,10 +45,12 @@ const Hero = () => {
             </div>
 
             <div className="pt-4">
-              <button className="group inline-flex items-center rounded-full bg-yellow-500 px-8 py-3 text-gray-900 transition-colors hover:bg-yellow-400">
+              <a href="/AS Bhebhe CV.pdf"
+                download 
+                className="group inline-flex items-center rounded-full bg-yellow-500 px-8 py-3 text-gray-900 transition-colors hover:bg-yellow-400">
                 {`Download CV`}
                 <ArrowDown className="ml-2 h-5 w-5 transition-transform group-hover:translate-y-1" />
-              </button>
+              </a>
             </div>
           </div>
 
