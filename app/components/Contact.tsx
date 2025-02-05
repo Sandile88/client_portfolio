@@ -1,7 +1,7 @@
 "use client"
 
 import type React from "react";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, Send } from "lucide-react";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { Select } from "./ui/select";
@@ -87,7 +87,7 @@ const Contact = () => {
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
                     {`Your Name`}
                   </label>
-                  <Input id="name" name="name" placeholder="Enter your full name" required className="w-full" />
+                  <Input id="name" name="name" placeholder="Enter your full name" required className="w-full text-gray-900" />
                 </div>
 
                 <div>
@@ -100,15 +100,8 @@ const Contact = () => {
                     type="email"
                     placeholder="Enter your email address"
                     required
-                    className="w-full"
+                    className="w-full text-gray-900"
                   />
-                </div>
-
-                <div>
-                  <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-1">
-                    {`Service Required`}
-                  </label>
-                  <Select id="service" name="service" options={serviceOptions} className="text-gray-900" required />
                 </div>
 
                 <div>
@@ -120,7 +113,7 @@ const Contact = () => {
                     name="message"
                     placeholder="Write your message here"
                     required
-                    className="min-h-[150px] w-full"
+                    className="min-h-[150px] w-full text-gray-900"
                   />
                 </div>
               </div>
@@ -132,8 +125,9 @@ const Contact = () => {
                 </div>
               )}
 
-              <button type="submit" className="rounded-full bg-yellow-500 px-8 py-3 hover:bg-yellow-400 text-gray-900 transition-colors">
+              <button type="submit" className="group inline-flex items-center justify-center rounded-full bg-yellow-500 px-8 py-3 hover:bg-yellow-400 text-gray-900 transition-colors">
                 <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
+                <Send className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1"/>
               </button>
             </form>
           </div>

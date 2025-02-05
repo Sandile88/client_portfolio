@@ -38,7 +38,9 @@ const Hero = () => {
               <h2 className="text-xl lg:text-2xl font-semibold text-yellow-500">{`Chartered Accountant`}</h2>
               <h1 className="text-3xl lg:text-5xl font-bold tracking-tight text-gray-900">{`Ayanda Bhebhe`}</h1>
               <p className="text-lg lg:text-xl text-gray-900 max-w-2xl mx-auto lg:mx-0">
-                {`An accomplished, dynamic and well-seasoned Accountant and Auditor with over 9 years of experience`}
+                {`A highly accomplished and dynamic accountant and auditor with over nine years of expertise in
+                 financial management, compliance, and risk assessment. Known for precision, strategic insight, and 
+                 a results-driven approach to optimizing financial performance.`}
               </p>
             </div>
 
@@ -77,10 +79,10 @@ const Hero = () => {
               <a
                 href="/AS Bhebhe CV.pdf"
                 download
-                className="inline-flex items-center justify-center rounded-full bg-yellow-500 px-6 py-3 text-base font-medium text-gray-900 hover:bg-yellow-400 transition-colors"
+                className="group inline-flex items-center justify-center rounded-full bg-yellow-500 px-6 py-3 text-base font-medium text-gray-900 hover:bg-yellow-400 transition-colors"
               >
                 {`Download CV`}
-                <ArrowDown className="ml-2 h-5 w-5" />
+                <ArrowDown className="ml-2 h-5 w-5 transition-transform group-hover:translate-y-1" />
               </a>
             </div>
           </div>
