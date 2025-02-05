@@ -1,6 +1,7 @@
 "use client"
-import { ArrowDown, Phone, Mail, MapPin, Linkedin } from "lucide-react"
-import Image from "next/image"
+
+import { ArrowDown, Phone, Mail, MapPin, Linkedin } from "lucide-react";
+import Image from "next/image";
 
 const Hero = () => {
   return (
@@ -89,5 +90,5 @@ const Hero = () => {
   )
 }
 
-export default Hero
+export default Hero;
 

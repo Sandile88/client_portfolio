@@ -1,7 +1,7 @@
 "use client"
 
-import type React from "react"
-import { Building2, Calendar, CheckCircle2 } from "lucide-react"
+import type React from "react";
+import { Building2, Calendar, CheckCircle2 } from "lucide-react";
 
 interface ExperienceItemProps {
   title: string
@@ -114,5 +114,5 @@ const Experience: React.FC = () => {
   )
 }
 
-export default Experience
+export default Experience;
 

@@ -1,7 +1,7 @@
 "use client"
 
-import type React from "react"
-import { Briefcase, BarChart, FileText, Database, Users, Cog, type LucideIcon } from "lucide-react"
+import type React from "react";
+import { Briefcase, BarChart, FileText, Database, Users, Cog, type LucideIcon } from "lucide-react";
 
 interface ServiceCardProps {
   icon: LucideIcon
@@ -82,5 +82,5 @@ const Services: React.FC = () => {
   )
 }
 
-export default Services
+export default Services;
 

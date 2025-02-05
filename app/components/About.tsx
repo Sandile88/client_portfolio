@@ -1,7 +1,7 @@
 "use client"
 
-import Image from "next/image"
-import { Link as ScrollLink } from "react-scroll"
+import Image from "next/image";
+import { Link as ScrollLink } from "react-scroll";
 
 const About = () => {
   return (
@@ -68,5 +68,5 @@ const About = () => {
   )
 }
 
-export default About
+export default About;
 
