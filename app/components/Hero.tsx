@@ -35,7 +35,7 @@ const Hero = () => {
 
           <div className="order-2 lg:order-1 text-center lg:text-left">
             <div className="space-y-4 mb-8">
-              <h2 className="text-xl lg:text-2xl font-semibold text-yellow-500">{`Chartered Accountant`}</h2>
+              <h2 className="text-xl lg:text-2xl font-semibold text-yellow-500">{`Chartered Management Accountant`}</h2>
               <h1 className="text-3xl lg:text-5xl font-bold tracking-tight text-gray-900">{`Ayanda Bhebhe`}</h1>
               <p className="text-lg lg:text-xl text-gray-900 max-w-2xl mx-auto lg:mx-0">
                 {`A highly accomplished and dynamic accountant and auditor with over nine years of expertise in

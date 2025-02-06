@@ -7,7 +7,7 @@ import { Menu, X } from "lucide-react";
 const Nav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
-  const menuItems = ["Home", "About Me", "Services", "Experience", "Contact"]
+  const menuItems = ["Home", "About Me", "Services", "Experience", "Education", "Contact"]
 
   return (
     <>
